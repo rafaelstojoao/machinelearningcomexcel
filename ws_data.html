@@ -7590,11 +7590,17 @@ O MS Excel é uma ferramnenta, das diversas, para lidar com dados. O conceito de
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><br/>
+<br/>
+<br/></p>
+<hr>
 <h1 id="Conjunto-de-dados">Conjunto de dados<a class="anchor-link" href="#Conjunto-de-dados">¶</a></h1><ul>
 <li>Em muitos casos, os dados acabam sendo armazenados de uma forma não tão bem estruturada.</li>
 <li>O relacionamento das tabelas, por si só, não garante <b> QUALIDADE </b> dos dados.</li>
 <li>Desta forma, se torna muito difícil analisar dados que não tem qualidade - as informações são distorcidas</li>
 </ul>
+<p><br/>
+<br/></p>
 <h2 id="ETL-(Extract-Transform-and-Load---Extra%C3%A7%C3%A3o,-Transforma%C3%A7%C3%A3o-e-Carga)">ETL (Extract Transform and Load - Extração, Transformação e Carga)<a class="anchor-link" href="#ETL-(Extract-Transform-and-Load---Extra%C3%A7%C3%A3o,-Transforma%C3%A7%C3%A3o-e-Carga)">¶</a></h2><p>Trata-se de uma das etapas mais importantes de uma análise inteligente.
 Estima-se que 60% de todo o esforço de uma análise é concentrado na preparação dos dados.</p>
 <ul>
@@ -7602,14 +7608,19 @@ Estima-se que 60% de todo o esforço de uma análise é concentrado na preparaç
 <li>Transform: Os dados estão adequados? Existem <b>problemas</b> com os dados?</li>
 <li>Load:  Para onde os dados irão? Qual objetivo desta análise?</li>
 </ul>
+<p><br/>
+<br/></p>
 <p>Etapa na qual:</p>
 <ul>
 <li>as características não importantes são descartadas – limpeza;</li>
 <li>mais de uma base de dados é utilizada – integração;</li>
 <li>valores que fogem muito da normalidade são excluídos – detecção de outliers;</li>
-<li>ruídos são filtrados;</li>
+<li>ruídos são filtrados;
+<br/>
+<br/>
+<br/></li>
 </ul>
-</div>
+</hr></div>
 </div>
 </div>
 </div>
@@ -7619,20 +7630,29 @@ Estima-se que 60% de todo o esforço de uma análise é concentrado na preparaç
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><br/>
+<br/></p>
 <h2 id="Problemas-comuns-aos-dados:">Problemas comuns aos dados:<a class="anchor-link" href="#Problemas-comuns-aos-dados:">¶</a></h2><p>Algumas situações são mais frequêntes que outras.</p>
 <html> Vamos ver um base de dados de exemplo. Faça o download da base, clicando <a href="https://github.com/rafaelstojoao/machinelearningcomexcel/raw/main/ds_ruidosa.xlsx" target="_blank">AQUI</a></html>
 <p><br/>
 <br/>
+<br/></p>
+<p><br/>
 <br/></p>
 <ul>
 <li><b>Dados Faltantes</b></li>
 </ul>
 <p>Em muitas situações, a priorização de alguns valores, gera a despriorização de outros. Mas isso pode refletir em uma base de dados com os chamados "dados faltantes".
 É importante a conscientização de que, uma vez que os dados são definidos como importantes, eles devem ser sempre priorizados à mesma medida. Isso pois num futuro, pode-se querer ter uma visão diferente da necessidade atual e os dados faltantes vão <b>enviezar</b> sua análise.</p>
-<p><br/></p>
+<p><br/>
+<br/>
+<br/></p>
 <p>Veja a imagem abaixo. Observe que, por alguma razão alguns valores não estão presentes na tabela. Isso impossibilita uma análise dia a dia, por exemplo sobre as condições climáticas das cidades mapeadas. Nem todo dia pode ser considerado. [ou não - veremos como superar isso].</p>
 <html><img alt="No description has been provided for this image" src="./imgs/dados_faltante.png"/></html>
 <p><br/>
+<br/>
+<br/>
+<br/>
 <br/>
 <br/></p>
 <ul>
@@ -7642,13 +7662,27 @@ Estima-se que 60% de todo o esforço de uma análise é concentrado na preparaç
 <html><img alt="No description has been provided for this image" src="./imgs/dados_ruido.png"/></html>
 <p>É intuitivo que não dá para tratar textos e números da mesma maneira.
 <br/>
+<br/>
+<br/>
+<br/>
 <br/></p>
 <p>Para <b> IDENTIFICAR </b> estas ocorrências, basta um filtro simples no Excel.
-Selecione a primeira linha de dados (cabeçalho) e busque pela opção <b>Ordenar e Filtrar</b>. Selecione a opção <b> Filtrar </b>, conforme a imagem abaixo nos mostra:</p>
+Selecione a primeira linha de dados (cabeçalho) e busque pela opção <b>Ordenar e Filtrar</b>. Selecione a opção <b> Filtrar </b>, conforme a imagem abaixo nos mostra:
+<br/></p>
 <html><img alt="No description has been provided for this image" src="./imgs/add_filter.png"/></html>
-<p><br/></p>
+<p><br/>
+<br/>
+<br/>
+<br/></p>
 <p>Ao clicar nas "setas" que aparecem no cabeçalho, agora, você pode ordenar os dados (de forma crescente ou decrescente) e verificar ao final da coluna que os dados problemáticos aparecem todos reunidos lá.</p>
 <html><img alt="No description has been provided for this image" src="./imgs/add_filter2.png"/></html>
+<p><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/></p>
 <p>Para ambos os casos (ruído e ausência de dados), existem diversas abordagens para a correção.  Podemos:</p>
 <ul>
 <li>Simplesmente remover as linhas problemáticas</li>
@@ -7656,6 +7690,10 @@ Selecione a primeira linha de dados (cabeçalho) e busque pela opção <b>Ordena
 <li>Utilizar o conceito de mediana para preencher o valor faltante/ruidoso (mais recomendado) - = MED(:) /</li>
 <li>Utilizar o conceito de moda para preencher o valor faltante/ruidoso - = MODA.SIMPLES(:) /=MODE.SNGL(:)</li>
 </ul>
+<p><br/>
+<br/>
+<br/>
+<br/></p>
 </div>
 </div>
 </div>
@@ -7666,17 +7704,18 @@ Selecione a primeira linha de dados (cabeçalho) e busque pela opção <b>Ordena
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Média, mediana e moda são diferentes medidas de centro em um conjunto de dados numéricos. Cada uma delas busca resumir um conjunto de dados com um único número para representar um dado "típico" desse conjunto.</p>
-<ul>
-<li><p>Média: o número "médio"; é encontrado somando-se todos os dados e dividindo pelo número de dados.
-Exemplo: a média de
+<section style="font-color:#6a6a6a">
+<p><strong>Média</strong>, <strong>mediana</strong> e <strong>moda</strong> são diferentes medidas de centro em um conjunto de dados numéricos. Cada uma delas busca resumir um conjunto de dados com um único número para representar um dado "típico" desse conjunto.</p>
+<pre><code>- Média: o número "médio"; é encontrado somando-se todos os dados e dividindo pelo número de dados.</code></pre>
+<p>Exemplo: a média de
 [4],
 [1] e
 [7] é
-[(4+1+7)/3 = 12/3 = 4].</p>
-</li>
-<li><p>Mediana: o número do centro; é encontrado ordenando-se todos os dados e escolhendo o que está no centro (ou, se houver dois números no centro, calculando-se a média desses dois números).
-Exemplo: a mediana de
+[(4+1+7)/3 = 12/3 = 4].
+<br/>
+<br/></p>
+<pre><code>- Mediana: o número do centro; é encontrado ordenando-se todos os dados e escolhendo o que está no centro (ou, se houver dois números no centro, calculando-se a média desses dois números).</code></pre>
+<p>Exemplo: a mediana de
 [4],
 [1] e
 [7] é
@@ -7685,9 +7724,9 @@ Exemplo: a mediana de
 [4],
 [7)], o número
 [4] está no centro.</p>
-</li>
-<li><p>Moda: o número mais frequente — ou seja, o número que aparece o maior número de vezes.
-Exemplo: a moda de
+<p><br/></p>
+<pre><code>- Moda: o número mais frequente — ou seja, o número que aparece o maior número de vezes.</code></pre>
+<p>Exemplo: a moda de
 [{4],
 [2],
 [4],
@@ -7695,8 +7734,9 @@ Exemplo: a moda de
 [2],
 [2}] é
 [2] porque ele aparece três vezes, ou seja, aparece mais que qualquer outro número.</p>
-</li>
-</ul>
+</section>
+<br/>
+<br/>
 </div>
 </div>
 </div>
@@ -7707,12 +7747,28 @@ Exemplo: a moda de
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><br/></p>
 <ul>
 <li><b>Discrepâncias</b></li>
 </ul>
 <p>Também chamadas de <b> Outliers</b> (fora da série)  é exatamente o que a tradução diz: um valor que foge à normalidade dos dados.</p>
 <html><img alt="No description has been provided for this image" src="./imgs/outliers.png"/></html>
+<pre><code>- É importante tratar os casos de *outliers* pois eles podem distorcer totalmete uma análise. 
+- Veja o caso abaixo, onde a média de idades de pessoas em uma planilha é totalmente diferente quando  o *outlier* não é identificado</code></pre>
 <html><img alt="No description has been provided for this image" src="./imgs/outliers2.png"/></html>
+<p><br/>
+<br/>
+<br/>
+<br/>
+<br/></p>
+<p><strong>Para identificar</strong> os casos de discrepâncias de um conjunto de dados, temos várias estratégias.</p>
+<ul>
+<li>Uma delas é a mesma abordagem do filtro. Ao ordenar os valores as discrepâncias ficam nas extremidades;</li>
+<li>Outra forma é por meio de gráficos.</li>
+</ul>
+<pre><code>- Selecione a coluna que quer identificar a presença de *outliers*.
+- Na aba &lt;b&gt;Inserir&lt;/b&gt;, busque a seção de **gráficos** e escolha a opção **gráfico de dispersão** (ou scatter plot).</code></pre>
+<html><img alt="No description has been provided for this image" src="./imgs/scatter.png"/></html>
 <ul>
 <li>Muitos valores numéricos</li>
 <li>Escalas diferentes</li>
@@ -7727,7 +7783,13 @@ Exemplo: a moda de
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-</div>
+<p><br/>
+<br/>
+<br/>
+<br/></p>
+<hr>
+<h1 id="A%C3%A7%C3%A3o">Ação<a class="anchor-link" href="#A%C3%A7%C3%A3o">¶</a></h1><h2 id="Realize-o-tratamento-adequado-na-base-de-dados-ruidosa-que-voc%C3%AA-baixou-(LINK)">Realize o tratamento adequado na base de dados ruidosa que você baixou (<a href="https://github.com/rafaelstojoao/machinelearningcomexcel/raw/main/ds_ruidosa.xlsx" target="_blank">LINK</a>)<a class="anchor-link" href="#Realize-o-tratamento-adequado-na-base-de-dados-ruidosa-que-voc%C3%AA-baixou-(LINK)">¶</a></h2><h2 id="O-que-voc%C3%AA-consegue-observar-nos-dados?">O que você consegue observar nos dados?<a class="anchor-link" href="#O-que-voc%C3%AA-consegue-observar-nos-dados?">¶</a></h2><hr>
+</hr></hr></div>
 </div>
 </div>
 </div>
