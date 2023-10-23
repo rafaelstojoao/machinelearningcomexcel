@@ -7624,6 +7624,12 @@ Estima-se que 60% de todo o esforço de uma análise é concentrado na preparaç
 <br/>
 <br/></li>
 </ul>
+<h2 id="Tipos-comuns-de-dados:">Tipos comuns de dados:<a class="anchor-link" href="#Tipos-comuns-de-dados:">¶</a></h2><pre><code>- Variáveis qualitativas - escalas nominais ou ordinais.
+- Variáveis quantitativas - escalas intervalares e proporcionais.
+- Variáveis categóricas/dicotômicas - sexo: M,F
+- Variáveis binárias - 0 (ausência) ou 1 (presença).
+- Variáveis discretas - idade
+- Variáveis contínuas - distância.</code></pre>
 </hr></div>
 </div>
 </div>
@@ -7828,7 +7834,10 @@ Esta técnica é usada para normalizar dados em uma escala específica, como val
 <hr>
 <h1 id="Hora-da-A%C3%A7%C3%A3o">Hora da Ação<a class="anchor-link" href="#Hora-da-A%C3%A7%C3%A3o">¶</a></h1><h2 id="Realize-o-tratamento-adequado-na-base-de-dados-ruidosa-que-voc%C3%AA-baixou-(LINK)">Realize o tratamento adequado na base de dados ruidosa que você baixou (<a href="https://github.com/rafaelstojoao/machinelearningcomexcel/raw/main/ds_ruidosa.xlsx" target="_blank">LINK</a>)<a class="anchor-link" href="#Realize-o-tratamento-adequado-na-base-de-dados-ruidosa-que-voc%C3%AA-baixou-(LINK)">¶</a></h2><p>Trata-se de uma base de dados que mapeia as condições climatológicas de algumas cidades da região e relaciona, também, valores investidos para comprar equipamentos, custear operações e manter o monitoramento constante.</p>
 <p>Você verá na planilha, as colunas Data da coleta, valor de umidade, valor de temperatura, vento, precipitação de chuva em mm, qual o sensor que realizou a captura, em qual cidade foi feita a leitura e qual valor investido para aquele dia.</p>
-<h2 id="O-que-voc%C3%AA-consegue-observar-nos-dados?">O que você consegue observar nos dados?<a class="anchor-link" href="#O-que-voc%C3%AA-consegue-observar-nos-dados?">¶</a></h2><hr>
+<h2 id="O-que-voc%C3%AA-consegue-observar-nos-dados?">O que você consegue observar nos dados?<a class="anchor-link" href="#O-que-voc%C3%AA-consegue-observar-nos-dados?">¶</a></h2><p><br/>
+<br/>
+<br/></p>
+<hr>
 </hr></hr></div>
 </div>
 </div>
@@ -7859,14 +7868,47 @@ Esta técnica é usada para normalizar dados em uma escala específica, como val
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="O-que-%C3%A9-minera%C3%A7%C3%A3o-de-dados">O que é mineração de dados<a class="anchor-link" href="#O-que-%C3%A9-minera%C3%A7%C3%A3o-de-dados">¶</a></h2><ul>
-<li>Introdução aos modelos simples de regressão linear e logística.</li>
+<h2 id="O-que-%C3%A9-minera%C3%A7%C3%A3o-de-dados">O que é mineração de dados<a class="anchor-link" href="#O-que-%C3%A9-minera%C3%A7%C3%A3o-de-dados">¶</a></h2><p>A I.A. foi, inicialmente projetada, para prever valores e situações.</p>
+<p>A previsão só é possível pois algo é recorrente. – padrão</p>
+<p>Portanto, podemos entender tudo isso como uma busca por <b>padrões</b> que ocorrem com frequência nos nossos dados.</p>
+<p>O termo <b> MACHINE LEARNING</b> ganhou notoriedade em meados dos anos 90 com a busca pela Inteligência Artificial;</p>
+<p>Para um sistema ser inteligente, deve aprender. Focar no processo de aprendizagem pode ser o diferencial do
+algoritmo;
+<br/>
+<br/>
+<br/>
+<br/></p>
+<p>O processo de KDD (Knowledge Discovery in Data) envolve toda a machine learning</p>
+<html><img alt="No description has been provided for this image" src="./imgs/ml.png" style="width:250px; float: left; padding:10px;"/></html>
+<p>Um programa de computador aprende a partir de uma experiência E, com respeito a algumas classes de tarefas T, com performance P, se sua performance nas tarefas em T melhora com a experiência E.
+<br/>
+<br/></p>
+<p>Por exemplo:
+T: Reconhecer letras escritas a mão, via imagens;
+P: % de instâncias corretamente reconhecidas;
+E: Base de dados de imagens de letras com o resultado esperado</p>
+<p>Não existe um algoritmo para ensinar um computador aprender, como uma criança. Entretanto para diversas situações, existem estratégias que lidam com dados de forma a extrair o máximo de conhecimento possível.</p>
+<p><br/>
+<br/></p>
+<p><br/></p>
+<p>Em 1959, Arthur Samuel definiu aprendizado de máquina como o "campo de estudo que dá aos computadores a habilidade de aprender sem serem explicitamente programados"</p>
+<p><br/>
+<br/></p>
+<html><img alt="No description has been provided for this image" src="./imgs/ml2.png" style="width:600px; float: left; padding:30px;"/></html>
+<ul>
+<li><p>Detecção de Fraudes - Bancos e operadoras de cartões, pioneiros na aprendizagem de máquina. Identificar possíveis transações fraudulentas e telefonar para o cliente confimar compras suspeitas.</p>
+</li>
+<li><p>Sistemas de recomendação - Há quanto tempo um humano não te filmes na Netflix?</p>
+</li>
+<li><p>Manuscrito - Qual a vantagem dos Correios tirarem fotos das nossas assinaturas, uma vez que imagens são mais pesadas (em MB)?</p>
+</li>
+<li><p>Autonomia - Uber e Tesla já têm carros rodando sozinhos nos EUA</p>
+</li>
 </ul>
-<p>A I.A. foi, inicialmente projetada, para prever
-valores e situações.
-A previsão só é possível pois algo é recorrente.
-– padrão</p>
-<html><img alt="No description has been provided for this image" src="./imgs/ml.png" style="width:200px; float: left; padding:10px;"/></html>
+<p><br/>
+<br/>
+<br/>
+<br/></p>
 <p>Para prever algo com eficiência é preciso aprender como o padrão se repete</p>
 </div>
 </div>
@@ -7878,13 +7920,9 @@ A previsão só é possível pois algo é recorrente.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Mas-e-quando-eu-tenho-muitos-valores-num%C3%A9ricos?--O-que-fazer?">Mas e quando eu tenho muitos valores numéricos?  O que fazer?<a class="anchor-link" href="#Mas-e-quando-eu-tenho-muitos-valores-num%C3%A9ricos?--O-que-fazer?">¶</a></h2><p>=CORREL()</p>
-<p>A correlação de Pearson é um teste estatístico que pode ser usado no cotidiano de profissionais diversos. Por norma, é empregada para manusear e obter entendimento sobre as variáveis indicadas.</p>
-<p>Com ela, é possível compreender sobre a aplicabilidade das mais variadas fórmulas, principalmente as utilizadas por cientistas de dados. Isso é fundamental para quem deseja se tornar um profissional especialista e multidisciplinar na área, em um mercado cada vez mais competitivo.</p>
-<p>O coeficiente de correlação de Pearson (r) é um teste cujo objetivo é medir o grau de correlação linear entre duas variáveis quantitativas, atributo ou característica de determinado assunto.</p>
-<p>A mensuração pode ser em relação à direção ou intensidade. Intensidade trata do relacionamento entre as variáveis indicadas. Já a direção é o tipo de correlação (positiva ou direta; negativa ou inversa).</p>
-<p>Na prática, é um índice dimensional “r” com valores que variam dos extremos entre -1 e +1, resultando na intensidade de uma relação linear entre dois conjuntos de dados. Se não houver linearidade entre os elementos associados, o coeficiente não será apresentado adequadamente. Logo, isso pode causar impactos nos resultados.</p>
-<html><img alt="No description has been provided for this image" src="./imgs/6correl].png"/></html>
+<h2 id="Observando-as-tr%C3%AAs-imagens-abaixo,-voc%C3%AA-j%C3%A1-parou-para-pensar-em-quais-as-caracter%C3%ADsticas-%C3%A9-que-s%C3%A3o-determinantes-para-classificar-um-animal-como-PEIXE?">Observando as três imagens abaixo, você já parou para pensar em quais as características é que são determinantes para classificar um animal como PEIXE?<a class="anchor-link" href="#Observando-as-tr%C3%AAs-imagens-abaixo,-voc%C3%AA-j%C3%A1-parou-para-pensar-em-quais-as-caracter%C3%ADsticas-%C3%A9-que-s%C3%A3o-determinantes-para-classificar-um-animal-como-PEIXE?">¶</a></h2><html><img alt="No description has been provided for this image" src="./imgs/p1.png" style="width:250px; float: left; padding:10px;"/></html>
+<html><img alt="No description has been provided for this image" src="./imgs/p2.png" style="width:250px; float: left; padding:10px;"/></html>
+<html><img alt="No description has been provided for this image" src="./imgs/p3.png" style="width:250px; float: left; padding:10px;"/></html>
 </div>
 </div>
 </div>
@@ -7895,13 +7933,118 @@ A previsão só é possível pois algo é recorrente.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Tarefa-de-classifica%C3%A7%C3%A3o">Tarefa de classificação<a class="anchor-link" href="#Tarefa-de-classifica%C3%A7%C3%A3o">¶</a></h2><ul>
+<p><br/>
+Agora que você já sabe que um peixe tem escamas, barbatana, cabeça triangular, etc etc...
+<br/></p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<h3 id="aponte-essas-caracter%C3%ADsticas-nos-peixes-abaixo:">aponte essas características nos peixes abaixo:<a class="anchor-link" href="#aponte-essas-caracter%C3%ADsticas-nos-peixes-abaixo:">¶</a></h3><html><img alt="No description has been provided for this image" src="./imgs/p4.png" style="width:300px; float: left; padding:10px;"/></html>
+<html><img alt="No description has been provided for this image" src="./imgs/p5.png" style="width:300px; float: left; padding:10px;"/></html>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Identificar características importantes é um desafio dos mais sérios no processode análise de dados - etapa conhecida como <b>"Seleção de
+características"</b></p>
+<p><br/>
+<br/></p>
+<p>Uma das principais etapas do aprendizado Quais características são as mais importantes para definir a CLASSE que o algoritmo deve observar? tamanho, peso, comprimento, cor da carne, cor da cauda, ...</p>
+<p><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/></p>
+<p>Após selecionar as melhores características para o contexto e treinar o algoritmo (nosso cérebro, no caso) é fácil afirmar que esse peixe é um?</p>
+<html><img alt="No description has been provided for this image" src="./imgs/p6.png" style="width:200px; float: right; padding:10px;"/></html>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/></p>
+<h2 id="Mas-e-nosso-exemplo-com-valores-num%C3%A9ricos?--O-que-fazer?">Mas e nosso exemplo com valores numéricos?  O que fazer?<a class="anchor-link" href="#Mas-e-nosso-exemplo-com-valores-num%C3%A9ricos?--O-que-fazer?">¶</a></h2><p><br/></p>
+<p>A função =CORREL() pode ser utilizada para correlacionar as variáveis (colunas) dos nossos dados;</p>
+<p><br/>
+<br/>
+<br/></p>
+<p>A correlação de <b>Pearson</b> é um teste estatístico que pode ser usado no cotidiano para compreender sobre a correlação linear entre duas variáveis quantitativas, atributo ou característica de determinado assunto.</p>
+<p><br/>
+<br/></p>
+<p>O resultado é entendido como indicador à direção ou intensidade.</p>
+<p><br/></p>
+<p><b>Intensidade</b> trata do relacionamento entre as variáveis indicadas.</p>
+<p>Já a <b>direção</b> é o tipo de correlação (positiva ou direta; negativa ou inversa).</p>
+<p><br/>
+<br/>
+<br/></p>
+<p>Na prática, é um coeficiente “r” com valores que variam dos extremos entre -1 e +1, resultando na intensidade de uma relação linear entre dois conjuntos de dados.</p>
+<html><img alt="No description has been provided for this image" src="./imgs/pearson.png"/></html>
+<p><br/>
+<br/>
+<br/>
+<br/></p>
+<h3 id="Na-pr%C3%A1tica...">Na prática...<a class="anchor-link" href="#Na-pr%C3%A1tica...">¶</a></h3><p>Observe a imagem abaixo, que descreve a aplicação de uma correlação de Pearson para produtos vendidos que tiveram desconto.
+Por meio dela, é possível entender em quais produtos, o desconto aplicado teve mais efeito sobre a quantidade de vendas...</p>
+<p>Indica quais produtos o público aguarda mais descontos.
+Baixe a planilha (<a href="https://github.com/rafaelstojoao/machinelearningcomexcel/raw/main/dataset_pearson.xlsx" target="_blank">AQUI</a>)</p>
+<html><img alt="No description has been provided for this image" src="./imgs/6correl].png"/></html>
+<h3 id="E-para-o-nosso-caso...">E para o nosso caso...<a class="anchor-link" href="#E-para-o-nosso-caso...">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Tarefa-de-classifica%C3%A7%C3%A3o">Tarefa de classificação<a class="anchor-link" href="#Tarefa-de-classifica%C3%A7%C3%A3o">¶</a></h2><p>Regressão:
+Agrupamento:<br/>
+Descoberta de padrões:</p>
+<p>Tarefa da mineração de dados e aprendizado de máquina:
+Associa dados a uma Classe por uma estratégia construída;
+Novos dados são submetidos à mesma estratégia para afirmar a qual
+classe pertencem (classificar)</p>
+<html><img alt="No description has been provided for this image" src="./imgs/class1.png"/></html>
+<ul>
 <li><p>altura: já é intuitivo separar exemplos em pessoas altas e baixas
 -- por que não começar a separar os dados da mesma maneira?</p>
 </li>
 <li><p>para isso, utiliza-se o conceito de ganho de informação</p>
 </li>
 </ul>
+<p>Geralmente é feita após um treinamento
+supervisionado.
+Etapa de aprendizagem
+Etapa de execução (teste)</p>
+<html><img alt="No description has been provided for this image" src="./imgs/class2.png"/></html>
 </div>
 </div>
 </div>
@@ -7951,12 +8094,6 @@ exemplos são da mesma classe tem utilidade máxima.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Entropia</p>
-<p>S é uma amostra dos exemplos de treinamento
-• p é a proporção de exemplos positivos em S
-• q a proporção de exemplos negativos em S
-• Entropia mede a “impureza” de S:
-– Entropia(S)=- p log2 p - qlog2 q</p>
 </div>
 </div>
 </div>
@@ -7968,6 +8105,16 @@ exemplos são da mesma classe tem utilidade máxima.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Naive Bayes</p>
+<p>Naive = ingênuo:
+O nome se dá pelo fato que o algoritmo não supõe relação
+entre os atributos. - independência das variáveis</p>
+<ul>
+<li>Simples;</li>
+<li>Construção e execução Rápidas;</li>
+<li>Necessita de poucos dados para seu treinamento;
+--- A grande maioria dos problemas reais tem muita
+dependência entre variáveis.</li>
+</ul>
 <p>Probabilístico
 P(A| B): Probabilidade de A ocorrer sendo que sei a probabilidade de B ocorrer
 P(B|A): Probabilidade de B ocorrer quando A ocorre
