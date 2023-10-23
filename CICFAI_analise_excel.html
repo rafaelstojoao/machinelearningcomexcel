@@ -7773,11 +7773,15 @@ Selecione a primeira linha de dados (cabeçalho) e busque pela opção <b>Ordena
 <br/></p>
 <p><strong>Para identificar</strong> os casos de discrepâncias de um conjunto de dados, temos várias estratégias.</p>
 <ul>
-<li>Uma delas é a mesma abordagem do filtro. Ao ordenar os valores as discrepâncias ficam nas extremidades;</li>
-<li>Outra forma é por meio de gráficos.</li>
+<li><p>Uma delas é a mesma abordagem do filtro. Ao ordenar os valores as discrepâncias ficam nas extremidades;</p>
+</li>
+<li><p>Outra forma é por meio de gráficos.</p>
+</li>
+<li><p>Selecione a coluna que quer identificar a presença de <em>outliers</em>.</p>
+</li>
+<li><p>Na aba <b>Inserir</b>, busque a seção de <strong>gráficos</strong> e escolha a opção <strong>gráfico de dispersão</strong> (ou scatter plot).</p>
+</li>
 </ul>
-<pre><code>- Selecione a coluna que quer identificar a presença de *outliers*.
-- Na aba &lt;b&gt;Inserir&lt;/b&gt;, busque a seção de **gráficos** e escolha a opção **gráfico de dispersão** (ou scatter plot).</code></pre>
 <html><img alt="No description has been provided for this image" src="./imgs/scatter.png"/></html>
 <p><br/><br/>
 <br/><br/></p>
@@ -7790,12 +7794,14 @@ Uma estratégia muito comum quando esse tipo de situação é encontrada, é a c
 <p>Por exemplo, no caso da base de dados apresentada, é possível observar que a coluna Chuva apresenta altíssima variância. Ou seja, é muito difícil encontrar valores repetidos nesta coluna (coluna E).</p>
 <p>Entretanto, para a análise que estamos supondo, não é preciso saber o valor com tantos detalhes. A intensão aqui é identificar quando tivemos chuvas fortes, ou fracas.</p>
 <p>Se assumirmos que chuva forte é toda aquela precipitação acima da média para a região, uma fórmula simples do Excel pode nos trazer esse valor</p>
-<p>$ =AVERAGE(E2:E200) ou =MEDIA(E2:E200) $</p>
+<p><br/>
+=AVERAGE(E2:E200) ou =MEDIA(E2:E200)</p>
 <p><br/>
 <br/>
 <br/>
 E se a nossa intensão é identificar Se um valor é alto (com base na média dos valores), a fórmula abaixo poderia nos trazer essa visualização com muita clareza:</p>
-<p>$ =IF(Ei&gt;AVERAGE(E0:EN);"Forte";"Fraca")  ou =SE(Ei&gt;MEDIA(E0:EN);"Forte";"Fraca")$</p>
+<p><br/></p>
+<p>=IF(Ei&gt;AVERAGE(E0:EN);"Forte";"Fraca")  ou =SE(Ei&gt;MEDIA(E0:EN);"Forte";"Fraca")</p>
 <p><br/>
 Observe que não precisamos criar mais problemas ao trocar números por texto. Podemos utilizar o valor 1 e 0 para indicar quando a chuva é forte, ou fraca.</p>
 <html><img alt="No description has been provided for this image" src="./imgs/categorizada.png"/></html>
