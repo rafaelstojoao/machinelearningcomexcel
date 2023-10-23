@@ -7776,11 +7776,30 @@ Selecione a primeira linha de dados (cabeçalho) e busque pela opção <b>Ordena
 <p><br/><br/>
 <br/><br/></p>
 <ul>
-<li><p><strong>Muitos valores numéricos</strong></p>
-</li>
-<li><p><strong>Escalas diferentes</strong></p>
-</li>
+<li><strong>Muitos valores numéricos</strong></li>
 </ul>
+<p>Para lidar com valores numéricos contínuos, muitas vezes é exigido um esforço muito grande.
+Uma estratégia muito comum quando esse tipo de situação é encontrada, é a chamada <strong>CATEGORIZAÇÃO</strong> de dados.</p>
+<p>Categorizar é o ato de criar categorias para valores contínuos - transformar dados numéricos contínuos em valores categóricos.</p>
+<p>Por exemplo, no caso da base de dados apresentada, é possível observar que a coluna Chuva apresenta altíssima variância. Ou seja, é muito difícil encontrar valores repetidos nesta coluna (coluna E).</p>
+<p>Entretanto, para a análise que estamos supondo, não é preciso saber o valor com tantos detalhes. A intensão aqui é identificar quando tivemos chuvas fortes, ou fracas.</p>
+<p>Se assumirmos que chuva forte é toda aquela precipitação acima da média para a região, uma fórmula simples do Excel pode nos trazer esse valor</p>
+<p>$ =AVERAGE(E2:E200) ou =MEDIA(E2:E200) $</p>
+<p><br/>
+<br/>
+<br/>
+E se a nossa intensão é identificar Se um valor é alto (com base na média dos valores), a fórmula abaixo poderia nos trazer essa visualização com muita clareza:</p>
+<p>$ =IF(Ei&gt;AVERAGE(E0:EN);"Forte";"Fraca")  ou =SE(Ei&gt;MEDIA(E0:EN);"Forte";"Fraca")$</p>
+<p><br/>
+Observe que não precisamos criar mais problemas ao trocar números por texto. Podemos utilizar o valor 1 e 0 para indicar quando a chuva é forte, ou fraca.</p>
+<html><img alt="No description has been provided for this image" src="./imgs/categorizada.png"/></html>
+<ul>
+<li><strong>Escalas diferentes</strong></li>
+</ul>
+<p>Outra situação muito presente nas bases de dados é a divergência da escala dos valores.
+Podemos estar lidando com uma tabela que tem na coluna</p>
+<p>Normalização min-max: esta técnica é usada para normalizar dados em uma escala específica, como valores entre 0 e 1. A ideia é transformar os valores para que estejam na mesma escala, independentemente do seu valor original. A fórmula para calcular a normalização min-max é: x_norm = (x - x_min) / (x_max - x_min), onde x é o valor original, x_min é o valor mínimo do conjunto de dados e x_max é o valor máximo.</p>
+<html><img alt="No description has been provided for this image" src="./imgs/normalizacao.png"/></html>
 </div>
 </div>
 </div>
@@ -7796,7 +7815,9 @@ Selecione a primeira linha de dados (cabeçalho) e busque pela opção <b>Ordena
 <br/>
 <br/></p>
 <hr>
-<h1 id="A%C3%A7%C3%A3o">Ação<a class="anchor-link" href="#A%C3%A7%C3%A3o">¶</a></h1><h2 id="Realize-o-tratamento-adequado-na-base-de-dados-ruidosa-que-voc%C3%AA-baixou-(LINK)">Realize o tratamento adequado na base de dados ruidosa que você baixou (<a href="https://github.com/rafaelstojoao/machinelearningcomexcel/raw/main/ds_ruidosa.xlsx" target="_blank">LINK</a>)<a class="anchor-link" href="#Realize-o-tratamento-adequado-na-base-de-dados-ruidosa-que-voc%C3%AA-baixou-(LINK)">¶</a></h2><h2 id="O-que-voc%C3%AA-consegue-observar-nos-dados?">O que você consegue observar nos dados?<a class="anchor-link" href="#O-que-voc%C3%AA-consegue-observar-nos-dados?">¶</a></h2><hr>
+<h1 id="Hora-da-A%C3%A7%C3%A3o">Hora da Ação<a class="anchor-link" href="#Hora-da-A%C3%A7%C3%A3o">¶</a></h1><h2 id="Realize-o-tratamento-adequado-na-base-de-dados-ruidosa-que-voc%C3%AA-baixou-(LINK)">Realize o tratamento adequado na base de dados ruidosa que você baixou (<a href="https://github.com/rafaelstojoao/machinelearningcomexcel/raw/main/ds_ruidosa.xlsx" target="_blank">LINK</a>)<a class="anchor-link" href="#Realize-o-tratamento-adequado-na-base-de-dados-ruidosa-que-voc%C3%AA-baixou-(LINK)">¶</a></h2><p>Trata-se de uma base de dados que mapeia as condições climatológicas de algumas cidades da região e relaciona, também, valores investidos para comprar equipamentos, custear operações e manter o monitoramento constante.</p>
+<p>Você verá na planilha, as colunas Data da coleta, valor de umidade, valor de temperatura, vento, precipitação de chuva em mm, qual o sensor que realizou a captura, em qual cidade foi feita a leitura e qual valor investido para aquele dia.</p>
+<h2 id="O-que-voc%C3%AA-consegue-observar-nos-dados?">O que você consegue observar nos dados?<a class="anchor-link" href="#O-que-voc%C3%AA-consegue-observar-nos-dados?">¶</a></h2><hr>
 </hr></hr></div>
 </div>
 </div>
@@ -7807,13 +7828,6 @@ Selecione a primeira linha de dados (cabeçalho) e busque pela opção <b>Ordena
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Mas-e-quando-eu-tenho-muitos-valores-num%C3%A9ricos?--O-que-fazer?">Mas e quando eu tenho muitos valores numéricos?  O que fazer?<a class="anchor-link" href="#Mas-e-quando-eu-tenho-muitos-valores-num%C3%A9ricos?--O-que-fazer?">¶</a></h2><p>=CORREL()</p>
-<p>A correlação de Pearson é um teste estatístico que pode ser usado no cotidiano de profissionais diversos. Por norma, é empregada para manusear e obter entendimento sobre as variáveis indicadas.</p>
-<p>Com ela, é possível compreender sobre a aplicabilidade das mais variadas fórmulas, principalmente as utilizadas por cientistas de dados. Isso é fundamental para quem deseja se tornar um profissional especialista e multidisciplinar na área, em um mercado cada vez mais competitivo.</p>
-<p>O coeficiente de correlação de Pearson (r) é um teste cujo objetivo é medir o grau de correlação linear entre duas variáveis quantitativas, atributo ou característica de determinado assunto.</p>
-<p>A mensuração pode ser em relação à direção ou intensidade. Intensidade trata do relacionamento entre as variáveis indicadas. Já a direção é o tipo de correlação (positiva ou direta; negativa ou inversa).</p>
-<p>Na prática, é um índice dimensional “r” com valores que variam dos extremos entre -1 e +1, resultando na intensidade de uma relação linear entre dois conjuntos de dados. Se não houver linearidade entre os elementos associados, o coeficiente não será apresentado adequadamente. Logo, isso pode causar impactos nos resultados.</p>
-<html><img alt="No description has been provided for this image" src="./imgs/6correl].png"/></html>
 </div>
 </div>
 </div>
@@ -7824,18 +7838,6 @@ Selecione a primeira linha de dados (cabeçalho) e busque pela opção <b>Ordena
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Dados-de-treinamento-e--dados-de-teste">Dados de treinamento e  dados de teste<a class="anchor-link" href="#Dados-de-treinamento-e--dados-de-teste">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="An%C3%A1lise-for%C3%A7a-bruta-(intuitiva)">Análise força bruta (intuitiva)<a class="anchor-link" href="#An%C3%A1lise-for%C3%A7a-bruta-(intuitiva)">¶</a></h2><p>*Treino com base de tenis</p>
 </div>
 </div>
 </div>
@@ -7865,6 +7867,23 @@ A previsão só é possível pois algo é recorrente.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Mas-e-quando-eu-tenho-muitos-valores-num%C3%A9ricos?--O-que-fazer?">Mas e quando eu tenho muitos valores numéricos?  O que fazer?<a class="anchor-link" href="#Mas-e-quando-eu-tenho-muitos-valores-num%C3%A9ricos?--O-que-fazer?">¶</a></h2><p>=CORREL()</p>
+<p>A correlação de Pearson é um teste estatístico que pode ser usado no cotidiano de profissionais diversos. Por norma, é empregada para manusear e obter entendimento sobre as variáveis indicadas.</p>
+<p>Com ela, é possível compreender sobre a aplicabilidade das mais variadas fórmulas, principalmente as utilizadas por cientistas de dados. Isso é fundamental para quem deseja se tornar um profissional especialista e multidisciplinar na área, em um mercado cada vez mais competitivo.</p>
+<p>O coeficiente de correlação de Pearson (r) é um teste cujo objetivo é medir o grau de correlação linear entre duas variáveis quantitativas, atributo ou característica de determinado assunto.</p>
+<p>A mensuração pode ser em relação à direção ou intensidade. Intensidade trata do relacionamento entre as variáveis indicadas. Já a direção é o tipo de correlação (positiva ou direta; negativa ou inversa).</p>
+<p>Na prática, é um índice dimensional “r” com valores que variam dos extremos entre -1 e +1, resultando na intensidade de uma relação linear entre dois conjuntos de dados. Se não houver linearidade entre os elementos associados, o coeficiente não será apresentado adequadamente. Logo, isso pode causar impactos nos resultados.</p>
+<html><img alt="No description has been provided for this image" src="./imgs/6correl].png"/></html>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Tarefa-de-classifica%C3%A7%C3%A3o">Tarefa de classificação<a class="anchor-link" href="#Tarefa-de-classifica%C3%A7%C3%A3o">¶</a></h2><ul>
 <li><p>altura: já é intuitivo separar exemplos em pessoas altas e baixas
 -- por que não começar a separar os dados da mesma maneira?</p>
@@ -7882,96 +7901,7 @@ A previsão só é possível pois algo é recorrente.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="An%C3%A1lise-for%C3%A7a-bruta-(intuitiva)">Análise força bruta (intuitiva)<a class="anchor-link" href="#An%C3%A1lise-for%C3%A7a-bruta-(intuitiva)">¶</a></h2><p>*Treino com base de tenis</p>
 </div>
 </div>
 </div>
